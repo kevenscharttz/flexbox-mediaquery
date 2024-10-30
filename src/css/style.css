@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+/* AREA DE FONTES */
+@font-face {
+    font-family: OpenSans; /* Nome que eu dei para a fonte */
+    src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf) format(truetype); /* local onde a fonte se encontra e o seu formato, que depende das letras depois do '.' */
+}
+
+/* AREA DE FONTES */
+
+/* ESTILIZAÇÃO */
+header {
+    align-items: center; /* Alinha o conteúdo na tela verticalmente */
+    background-color: black; /* define a cor de fundo do header */
+    display: flex; /* transforma o elemento em um container flexivel, pra poder mexer nos "filho"(outros elementos) dentro dele */
+    flex-wrap: wrap; /* Faz com que, caso o elemento passem o tamanho do pai, eles quebrem a linha indo para uma nova */
+    justify-content: space-between; /* Deixa um espaço no meio dos elementos */
+    padding: 20px; /* Definição de um preenchimento do conteúdo de 20px */
+}
+
+ul {
+    display: flex; /* transforma o elemento em um container flexivel, pra poder mexer nos "filho"(outros elementos) dentro dele */
+    list-style: none; /* tira as "bolinhas" da lista */
+}
+
+li {
+    margin: 0 0 0 10px; /* margem esquerda será aumentada em 10px */
+}
+
+a {
+    color: white; /* define a cor dos links de branco */
+    text-decoration: none; /* tira o underline do link */
+}
+
+body {
+    font-family: OpenSans; /* definição da fonte que apareça, e em caso de erro ou suporte do navegador, apareça a outra */
+    font-size: 1em; /* definição do tamanho da fonte, seguindo a definição de altura do glifo da letra 'M' */
+}
+
+h3 {
+    font-size: 1.5em; /* define o tamanho da fonte em 1.5 vezes o tamanho do glifo 'M' */
+    margin: 100px; /* definição da margem para todos os lados de 40px */
+    text-align: center; /* centraliza o texto na pagina */
+}
+
+section {
+    display: flex; /* transforma o elemento em um container flexivel, pra poder mexer nos "filho"(outros elementos) dentro dele */
+    flex-wrap: wrap; /* Faz com que, caso o elemento passem o tamanho do pai, eles quebrem a linha indo para uma nova */
+    margin: 100px; /* Definição da margem de 100px para todas as direções */
+}
+
+section article {
+    flex: 1 1 300px; /* O primeiro 1 é o FLEX-GROW, que preenche algum espaço disponivel o segundo é o FLEX-SHRINK, que permite as iimagens diminuirem pra caber na caixa, e o 300px é o tamanho inicial das imagens antes do espaço do flex-grow e flex-shrink */
+    margin: 10px; /* define um margin de 10px para todas as direções */
+    max-width: 700px; /* Definição do tamanho da caixa para não ficar maior que a imagem */
+}
+
+img {
+    display: block; /* transforma a imagem como se fosse um bloco */
+    max-width: 100%; /* Faz a imagem ocupar 100% do pai, que é o article, assim não ficando enorme */
+    width: 700px; /* definição da largura da imagem */
+}
+
+article p {
+    font-size: 0.9em; /* define o tamanho da fonte em 0.9 vezes o tamanho do glifo 'M' */
+    margin: 0; /* define um margin de 0% para todas as direções */
+    opacity: 0.5; /* altera a opacidade da imagem */
+    text-align: center; /* centraliza o texto na pagina */
+}
+
+/*  FIM DA ESTILIZAÇÃO */
+
+/* MEDIA QUERY */
+@media (max-width: 700px) {
+    ul {
+        flex-direction: column; /* transforma o conteúdo selecionado em colunas */
+    }
+
+    header > a { /* Seletor para o elemento da logo */
+        font-size: 2.5em; /* Tamanho da fonte aumentado para a logo */
+    }
+
+    li {
+        background-color: rgba(128, 128, 128, 0.651); /* define o fundo do texto na imagem do menu */
+        margin: 5px; /* define um margin de 5px para todas as direções */
+        padding: 1px; /* define um padding de 1px para todas as direções */
+    }
+}
+
+/* FIM DO MEDIA QUERY */
